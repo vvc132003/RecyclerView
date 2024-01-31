@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import java.util.List;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.app.AlertDialog;
 
 import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements StudentAdapter.OnItemClickListener {
 
     private RecyclerView recyclerView;
@@ -57,9 +59,9 @@ public class MainActivity extends AppCompatActivity implements StudentAdapter.On
         TextView textViewRole = dialogView.findViewById(R.id.roleTextView);
 
         textViewId.setText("ID: " + student.getId());
-        // textViewEmail.setText("Email: " + student.getEmail());
-        //  textViewPassword.setText("Mật khẩu: " + student.getPassword());
-        //  textViewRole.setText("Phân quyền: " + student.getRole());
+        textViewEmail.setText("Địa chỉ: " + student.getDiaChi());
+        textViewPassword.setText("Họ tên: " + student.getHoTen());
+        textViewRole.setText("Số điện thoại: " + student.getSoDienThoai());
 
         builder.setView(dialogView);
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());

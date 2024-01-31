@@ -42,10 +42,10 @@ public class StudentActivity extends AppCompatActivity {
         TextView textViewPassword = dialogView.findViewById(R.id.passwordTextView);
         TextView textViewRole = dialogView.findViewById(R.id.roleTextView);
 
-        textViewId.setText(String.valueOf(student.getId()));
-        //  textViewEmail.setText(student.getEmail());
-        // textViewPassword.setText(student.getPassword());
-        // textViewRole.setText(student.getRole());
+        textViewId.setText("ID: " + student.getId());
+        textViewEmail.setText("Địa chỉ: " + student.getDiaChi());
+        textViewPassword.setText("Họ tên: " + student.getHoTen());
+        textViewRole.setText("Số điện thoại: " + student.getSoDienThoai());
         builder.setView(dialogView);
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
 
